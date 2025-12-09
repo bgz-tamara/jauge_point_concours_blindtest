@@ -1,0 +1,154 @@
+/* Insérez ceci dans la balise <style> de votre fichier */
+/*body {
+    background-color: violet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+}*/
+
+/* --- NOUVEAU STYLE CSS COMPLET --- */
+
+/* 1. Importation des polices Google Fonts */
+/* Montserrat pour le corps de texte (moderne et simple) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* Bungee Shade pour les titres (festif et cartoon) */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F3E5F5; /* Violet très clair (Lavande) */
+    color: #4A148C; /* Violet foncé pour le texte principal */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    color: #6A1B9A; /* Violet soutenu */
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-shadow: 2px 2px #E1BEE7; /* Ombre claire pour un effet 3D */
+}
+
+/* --- Style de la section de configuration (Setup) --- */
+#setup {
+    background-color: #EDE7F6; /* Violet encore plus clair */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#nomEquipesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+input[type="number"], input[type="text"], select {
+    padding: 10px;
+    border: 2px solid #9C27B0; /* Violet moyen */
+    border-radius: 5px;
+    font-size: 1.2em;
+    width: 200px;
+    background-color: #fefefe;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #7B1FA2; /* Violet foncé pour les boutons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Bords arrondis pour un look moderne */
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.1s;
+    margin: 5px;
+}
+
+.btn-demi-point {
+    font-size: 0.8em; /* Rendre la police plus petite */
+    padding: 8px 15px; /* Réduire le rembourrage (espace intérieur) */
+    border-radius: 15px; /* Optionnel : bords un peu moins arrondis */
+    opacity: 0.85; /* Optionnel : les rendre légèrement plus discrets */
+}
+
+button:hover {
+    background-color: #4A148C;
+    transform: translateY(-2px);
+}
+
+/* --- Style du Scoreboard et des Jauges --- */
+
+#scoreboardContainer {
+    display: flex;
+    justify-content: center; /* Centrer les jauges */
+    gap: 40px; /* Plus d'espace entre les jauges */
+    padding: 20px;
+    align-items: flex-end;
+    min-height: 400px;
+}
+
+.team-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+
+    width: 300px; /* Définir une largeur qui convient à la majorité des noms */
+    min-width: 150px; /* Garantir une largeur minimale */
+}
+
+/* Style spécifique pour le nom de l'équipe */
+.team-column h3 {
+    font-family: 'Bungee Shade', cursive; /* Police festive ici */
+    color: #4A148C;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Nom de l'équipe leader (couleur Gold) */
+.team-leader-name {
+    color: gold !important; 
+    text-shadow: 2px 2px 5px #7B1FA2;
+}
+
+.score-display {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #7B1FA2;
+}
+
+.gauge-base {
+    width: 80px; /* Jauges plus larges */
+    height: 300px; /* <-- HAUTEUR MAXIMALE DE LA JAUGE DOIT ÊTRE DÉFINIE */
+    background-color: #E1BEE7; /* Fond de jauge très clair */
+    /* ... autres styles ... */
+    margin-bottom: 20px;
+    border: 3px solid #6A1B9A; 
+    border-radius: 10px;
+    
+    /* Les deux lignes cruciales pour le remplissage par le bas : */
+    display: flex; /* Active le modèle flexbox */
+    flex-direction: column-reverse; /* Force les éléments enfants (le .gauge-fill) à démarrer du bas */
+    
+    overflow: hidden; 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.classementList {
+    text-align: center;
+}

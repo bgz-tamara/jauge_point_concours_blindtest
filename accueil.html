@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Compteur de Points Jauges</title>
+    <link rel="stylesheet" href="style.css">
+    <script async="" src="logique.js"></script>
+</head>
+<body>
+    <h1>Concours de blindtest !</h1>
+
+    <div id="setup">
+        <label for="numEquipes">Nombre d'équipes : </label>
+        <input type="number" id="numEquipes" min="1" value="3">
+        
+        <label for="maxScoreSelect" style="margin-left: 20px;">Score Maximum : </label>
+        <select id="maxScoreSelect">
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="50" selected>50</option>
+            <option value="100">100</option>
+        </select>
+        <button onclick="configurerEquipes()">Configurer</button>
+        <div id="nomEquipesContainer">
+            </div>
+    </div>
+
+    <hr>
+
+    <div id="scoreboardContainer">
+        </div>
+
+    <div style="margin-top: 20px;">
+        <button onclick="terminerPartie()">Partie terminée</button>
+    </div>
+
+    <div id="resultatContainer" style="display: none; text-align: center; padding: 50px;">
+        <h2>Félicitations au gagnant !</h2>
+        <h1 id="nomGagnant" style="font-size: 5em; color: green; text-shadow: 2px 2px 5px #333;"></h1>
+        
+        <h2 id="scoreGagnant" style="font-size: 3em; margin-top: -20px; color: #7B1FA2;"></h2>
+        
+        <hr style="width: 50%; margin: 30px auto;">
+        
+        <h3>Classement Final</h3>
+        <div id="classementList" style="margin: 20px auto; width: 600px; text-align: center; font-size: 1.5em;">
+            </div>
+
+        <button onclick="recommencerPartie()">Nouvelle Partie</button>
+    </div>
+</body>
+</html>
